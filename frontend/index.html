@@ -1,13 +1,112 @@
 <!doctype html>
-<html>
+<html data-theme="autumn">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DiraCar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
   <link href="./output.css" rel="stylesheet">
+  <style>
+    /* Custom styles for the active pagination button */
+    .pagination-button-active {
+      @apply bg-red-600 text-white; /* Apply Tailwind utility classes */
+    }
+  </style>
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<body class="min-h-screen">
+    <main>
+        <!-- Hero Section -->
+        <div class="hero bg-gray-900 min-h-screen">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <img src="./assets/hero.svg"/>
+              <div>
+                <h1 class="text-7xl bg-gradient-to-r from-red-400 to-red-700
+                 font-semibold inline-block text-transparent bg-clip-text">Dira Car</h1>
+                <p class="py-6 text-teal-50 text-lg">
+                    Your go-to site for making informed car purchase decisions!
+                     We provide insights into whether you can afford your dream car
+                      and offer personalized payment recommendations. Make your dream 
+                      ride a reality with our financial decision support!
+                </p>
+                <button class="btn btn-outline btn-error">Get Started</button>
+              </div>
+            </div>
+          </div>
+        
+        <!--Search section-->
+        <div class="flex items-center justify-center bg-white lg:flex-col">
+            <h1 class="text-3xl font-bold pt-14 pb-4 text-red-700">Search for you dream car</h1>
+            <select class="select bg-red-200 text-red-900 w-full max-w-xs">
+                <option disabled selected>Select a brand</option>
+                <option>Toyota</option>
+                <option>Mercedes</option>
+                <option>Audi</option>
+                <option>BMW</option>
+              </select>
+        </div>
+        
+        <div class="pt-8 bg-white flex items-center justify-center space-x-8">
+            <div class="card bg-red-700 w-96 selection">
+                <figure>
+                    <img class="size-10/12" src="./assets/bmwCar.png" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-white">Shoes!</h2>
+                    <p class="text-white">If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-error text-red-800 bg-slate-50">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card bg-red-700 w-96 selection">
+                <figure>
+                    <img class="size-10/12" src="./assets/bmwCar.png" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-white">Shoes!</h2>
+                    <p class="text-white">If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-error  text-red-800 bg-slate-50">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-red-700 w-96 selection">
+                <figure>
+                    <img class="size-10/12" src="./assets/bmwCar.png" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title text-white">Shoes!</h2>
+                    <p class="text-white">If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-error text-red-800 bg-slate-50">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pagination Section -->
+        <div id="pagination" class="join flex items-center justify-center bg-white py-6">
+        </div>
+    </main>
+    
+    <script>
+        // Custom number of pages
+        print("HI");
+        const numberOfPages = 2; // You can change this value to your custom number
+        const paginationContainer = document.getElementById('pagination');
+
+        for (let i = 1; i <= numberOfPages; i++) {
+            const input = document.createElement('input');
+            input.type = 'radio';
+            input.name = 'options';
+            input.className = 'join-item btn btn-outline btn-error text-red-800';
+            input.ariaLabel = i.toString();
+            if (i === 1) input.checked = true;
+            paginationContainer.appendChild(input);
+        }
+    </script>
 </body>
 </html>
+
+
