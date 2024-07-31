@@ -5,12 +5,6 @@
   <title>DiraCar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
   <link href="./output.css" rel="stylesheet">
-  <style>
-    /* Custom styles for the active pagination button */
-    .pagination-button-active {
-      @apply bg-red-600 text-white; /* Apply Tailwind utility classes */
-    }
-  </style>
 </head>
 <body class="min-h-screen">
     <main>
@@ -89,11 +83,8 @@
         <div id="pagination" class="join flex items-center justify-center bg-white py-6">
         </div>
     </main>
-    
     <script>
-        // Custom number of pages
-        print("HI");
-        const numberOfPages = 2; // You can change this value to your custom number
+        const numberOfPages = 2;
         const paginationContainer = document.getElementById('pagination');
 
         for (let i = 1; i <= numberOfPages; i++) {
